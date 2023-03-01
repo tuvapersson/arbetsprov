@@ -80,26 +80,14 @@ header {
 .product-flex-container {
     display: flex;
 }
+// .product-img {
+//     width: 50vw;
+// }
 .product-info {
     background-color: #f2f2f2;
-    flex-basis: 50%;
     text-align: center;
-    .product-info-top {
-        display: flex;
-        justify-content: space-between;
-        span:nth-child(1) {
-            background-color: black;
-            color: white;
-            padding: 5px 30px;
-            display: inline-block;
-            font-size: 16px;
-        }
-        span:nth-child(2) {
-            padding: 5px 30px;
-            display: inline-block;
-            font-size: 16px;
-        }
-    }
+    flex-basis: 50%;
+    // width: 100%;
     .product-logo {
         margin-top: 30px;
     }
@@ -117,23 +105,6 @@ header {
         margin-top: 20px;
         margin-bottom: 30px;
     }
-    .sizes {
-        @include flexCenter(row);
-        div {
-            width: 30px;
-            height: 30px;
-            border: 1px solid gray;
-            line-height: 30px;
-            margin: 5px;
-            margin-top: 20px;
-            transition: 0.1s;
-            &:hover {
-                background-color: black;
-                color: white;
-                cursor: pointer;
-            }
-        }
-    }
     button {
         background-color: black;
         padding: 12px 40px;
@@ -141,4 +112,105 @@ header {
         color: white;
         font-size: 20px;
     }
+    .article-no {
+        margin-top: 35px;
+        font-weight: 500;
+        margin-bottom: 20px;
+        span {
+            font-weight: 500;
+            opacity: 0.5;
+        }
+    }
 }
+.product-info-top {
+    display: flex;
+    justify-content: space-between;
+    span:nth-child(1) {
+        background-color: black;
+        color: white;
+        padding: 5px 30px;
+        display: inline-block;
+        font-size: 16px;
+    }
+    span:nth-child(2) {
+        padding: 5px 30px;
+        display: inline-block;
+        font-size: 16px;
+    }
+}
+.sizes {
+    @include flexCenter(row);
+    div {
+        width: 30px;
+        height: 30px;
+        border: 1px solid gray;
+        line-height: 30px;
+        margin: 5px;
+        margin-top: 20px;
+        &:hover {
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+.accordion {
+    text-align: left;
+    padding: 0 50px;
+}
+.accordion-item {
+    border-bottom: solid 1px gray;
+    &:first-child {
+        border-top: solid 1px gray;
+    }
+    .accordion-title {
+        padding: 20px 0 20px 0;
+        display: flex;
+        justify-content: space-between;
+        &:hover {
+            cursor:pointer;
+        }
+    }
+    .accordion-description {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 1s linear;
+        p {
+            padding-bottom: 20px;
+            font-weight: 500;
+        }
+    }
+}
+.accordion-item.accordionActive {
+    .accordion-description {
+        max-height: 100px;
+
+    }
+}
+.arrow-icon {
+    span:first-child {
+        display: block;
+        width: 14px;
+        height: 1.5px;
+        border-radius: 50%;
+        background-color: gray;
+        transform: rotate(45deg);
+        transform-origin: top-left;
+        position: relative;
+        top: 10px;
+        left: 1px;
+    }
+    span:nth-child(2) {
+        display: block;
+        width: 14px;
+        height: 1.5px;
+        border-radius: 50%;
+        background-color: gray;
+        transform: rotate(-45deg);
+        transform-origin: top-right;
+        margin-left: 10px;
+        position: relative;
+        top: 8px;
+    }
+}
+

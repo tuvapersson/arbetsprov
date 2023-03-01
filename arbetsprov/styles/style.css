@@ -82,24 +82,8 @@ header nav ul li span {
 
 .product-info {
   background-color: #f2f2f2;
-  flex-basis: 50%;
   text-align: center;
-}
-.product-info .product-info-top {
-  display: flex;
-  justify-content: space-between;
-}
-.product-info .product-info-top span:nth-child(1) {
-  background-color: black;
-  color: white;
-  padding: 5px 30px;
-  display: inline-block;
-  font-size: 16px;
-}
-.product-info .product-info-top span:nth-child(2) {
-  padding: 5px 30px;
-  display: inline-block;
-  font-size: 16px;
+  flex-basis: 50%;
 }
 .product-info .product-logo {
   margin-top: 30px;
@@ -118,30 +102,114 @@ header nav ul li span {
   margin-top: 20px;
   margin-bottom: 30px;
 }
-.product-info .sizes {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.product-info .sizes div {
-  width: 30px;
-  height: 30px;
-  border: 1px solid gray;
-  line-height: 30px;
-  margin: 5px;
-  margin-top: 20px;
-  transition: 0.1s;
-}
-.product-info .sizes div:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
 .product-info button {
   background-color: black;
   padding: 12px 40px;
   margin-top: 30px;
   color: white;
   font-size: 20px;
+}
+.product-info .article-no {
+  margin-top: 35px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.product-info .article-no span {
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.product-info-top {
+  display: flex;
+  justify-content: space-between;
+}
+.product-info-top span:nth-child(1) {
+  background-color: black;
+  color: white;
+  padding: 5px 30px;
+  display: inline-block;
+  font-size: 16px;
+}
+.product-info-top span:nth-child(2) {
+  padding: 5px 30px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.sizes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.sizes div {
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  line-height: 30px;
+  margin: 5px;
+  margin-top: 20px;
+}
+.sizes div:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.accordion {
+  text-align: left;
+  padding: 0 50px;
+}
+
+.accordion-item {
+  border-bottom: solid 1px gray;
+}
+.accordion-item:first-child {
+  border-top: solid 1px gray;
+}
+.accordion-item .accordion-title {
+  padding: 20px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.accordion-item .accordion-title:hover {
+  cursor: pointer;
+}
+.accordion-item .accordion-description {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s linear;
+}
+.accordion-item .accordion-description p {
+  padding-bottom: 20px;
+  font-weight: 500;
+}
+
+.accordion-item.accordionActive .accordion-description {
+  max-height: 100px;
+}
+
+.arrow-icon span:first-child {
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  border-radius: 50%;
+  background-color: gray;
+  transform: rotate(45deg);
+  transform-origin: top-left;
+  position: relative;
+  top: 10px;
+  left: 1px;
+}
+.arrow-icon span:nth-child(2) {
+  display: block;
+  width: 14px;
+  height: 1.5px;
+  border-radius: 50%;
+  background-color: gray;
+  transform: rotate(-45deg);
+  transform-origin: top-right;
+  margin-left: 10px;
+  position: relative;
+  top: 8px;
 }/*# sourceMappingURL=style.css.map */
