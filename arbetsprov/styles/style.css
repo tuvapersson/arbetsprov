@@ -3,6 +3,11 @@
   font-weight: 300;
 }
 
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .top-banner {
   background-color: #1d1d1b;
   color: lightgray;
@@ -38,19 +43,19 @@ header nav ul {
   align-items: center;
   width: 300px;
 }
-header nav ul li {
+header nav ul li a {
   font-weight: 500;
   font-size: 18px;
   display: flex;
   align-items: center;
 }
-header nav ul li span {
+header nav ul li a span {
   font-weight: inherit;
   padding-right: 10px;
 }
 
 .logo {
-  width: 320px;
+  min-width: 320px;
   height: 90px;
   text-align: center;
   line-height: 90px;
@@ -72,9 +77,10 @@ header nav ul li span {
   background: linear-gradient(180deg, rgb(236, 236, 236) 0%, rgb(255, 255, 255) 100%);
   text-align: center;
   flex-basis: 50%;
+  position: relative;
 }
 .product-info .product-logo {
-  margin-top: 30px;
+  margin-top: 60px;
 }
 .product-info .product-title {
   font-size: 22px;
@@ -90,6 +96,11 @@ header nav ul li span {
   margin-top: 30px;
   color: white;
   font-size: 20px;
+  transition: 0.1s;
+}
+.product-info button:hover {
+  background-color: #2a2c46;
+  cursor: pointer;
 }
 .product-info .article-no {
   margin-top: 35px;
@@ -115,16 +126,20 @@ header nav ul li span {
   width: 100px;
   display: inline-block;
   font-size: 16px;
+  position: absolute;
+  left: 0;
 }
 
-.product-info-top {
-  display: flex;
-  justify-content: space-between;
-}
-.product-info-top span:nth-child(2) {
+.available-label {
   padding: 5px 30px;
   display: inline-block;
   font-size: 16px;
+  position: absolute;
+  right: 0;
+}
+.available-label img {
+  width: 15px;
+  margin-right: 5px;
 }
 
 .sizes {
@@ -210,9 +225,10 @@ header nav ul li span {
 }
 
 .more-products-section {
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
   margin-bottom: 100px;
+  padding: 0 30px;
 }
 .more-products-section .more-products-title {
   margin-top: 140px;
@@ -228,8 +244,9 @@ header nav ul li span {
 }
 
 .more-products-grid {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 10px;
 }
 .more-products-grid h2 {
   margin: 15px 0 10px 0;
@@ -238,6 +255,9 @@ header nav ul li span {
 .product-suggestion {
   position: relative;
   text-align: center;
+}
+.product-suggestion img {
+  width: 100%;
 }
 .product-suggestion .label {
   position: absolute;
@@ -257,6 +277,15 @@ header nav ul li span {
   margin-top: 20px;
   margin-bottom: 30px;
 }
+.product-suggestion .price.sale span:nth-child(1) {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  padding-right: 5px;
+}
+.product-suggestion .price.sale span:nth-child(2) {
+  color: red;
+  padding-left: 5px;
+}
 
 .view-products {
   display: flex;
@@ -273,6 +302,7 @@ header nav ul li span {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 .newsletter-section .newsletter-content {
   display: flex;
@@ -289,6 +319,10 @@ header nav ul li span {
   text-align: center;
   width: 400px;
 }
+.newsletter-section .newsletter-content .newsletter-text img {
+  overflow: hidden;
+  min-height: 100%;
+}
 .newsletter-section .newsletter-content h3 {
   font-size: 40px;
   letter-spacing: 1px;
@@ -299,11 +333,17 @@ header nav ul li span {
   line-height: 30px;
 }
 
+form {
+  display: flex;
+  align-items: center;
+}
+
 input[type=text] {
   height: 50px;
   width: 300px;
   background-color: white;
   padding-left: 20px;
+  color: gray;
 }
 
 input[type=submit] {
@@ -314,10 +354,17 @@ input[type=submit] {
   width: 150px;
   text-align: center;
   letter-spacing: 1px;
+  transition: 0.1s;
+}
+
+input[type=submit]:hover {
+  background-color: #2a2c46;
+  cursor: pointer;
 }
 
 .socials {
-  max-width: 1440px;
+  max-width: 1500px;
+  padding: 0 30px;
   margin: 80px auto;
   margin-bottom: 50px;
   display: flex;
@@ -331,21 +378,26 @@ input[type=submit] {
   letter-spacing: 1px;
   font-size: 20px;
   font-weight: 500;
+  transition: 0.1s;
+}
+.socials button:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }
 
 footer {
   background-color: black;
-  height: 800px;
 }
 
 .footer-navigation-container {
   display: flex;
-  max-width: 1440px;
+  max-width: 1500px;
   margin: 0 auto;
   justify-content: space-between;
   text-align: left;
   color: white;
-  padding: 100px 0;
+  padding: 100px 30px;
 }
 .footer-navigation-container .footer-navigation {
   width: 100%;
@@ -365,10 +417,10 @@ footer {
 
 .company-text {
   color: white;
-  max-width: 1200px;
+  max-width: 1260px;
   text-align: center;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 70px 0px;
   line-height: 24px;
   border-bottom: 1px solid lightgray;
   border-top: 1px solid lightgray;
@@ -384,8 +436,62 @@ footer {
   display: block;
   font-size: 14px;
   margin-top: 10px;
+  padding-bottom: 30px;
 }
 
+@media screen and (max-width: 1350px) {
+  .company-text {
+    margin: 0 30px;
+  }
+  header {
+    height: 100px;
+  }
+  header nav {
+    padding: 0 50px;
+  }
+  header nav ul {
+    width: 250px;
+  }
+  header nav ul li a {
+    font-size: 16px;
+  }
+  .logo {
+    min-width: 210px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+  }
+  .cart-icon {
+    width: 20px;
+  }
+  .top-banner {
+    font-size: 12px;
+  }
+  .product-info .product-title {
+    font-size: 20px;
+  }
+  .product-info button {
+    font-size: 16px;
+  }
+  .more-products-section .more-products-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+  }
+  input[type=submit] {
+    font-size: 16px;
+  }
+  .socials button {
+    font-size: 16px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .more-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+  }
+}
 .mockup {
   opacity: 0.4;
   width: 100%;
@@ -395,4 +501,5 @@ footer {
   z-index: 10;
   display: block;
   text-align: center;
+  display: none;
 }/*# sourceMappingURL=style.css.map */
