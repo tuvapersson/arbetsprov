@@ -12,7 +12,6 @@
   z-index: 10;
   display: block;
   text-align: center;
-  display: none;
 }
 
 .top-banner {
@@ -69,7 +68,7 @@ header nav ul li span {
   font-weight: 500;
   font-size: 24px;
   border: 1px solid gray;
-  background-color: #d8d8d8;
+  background-color: lightgray;
 }
 
 .cart-icon {
@@ -81,7 +80,7 @@ header nav ul li span {
 }
 
 .product-info {
-  background-color: #f2f2f2;
+  background: linear-gradient(180deg, rgb(236, 236, 236) 0%, rgb(255, 255, 255) 100%);
   text-align: center;
   flex-basis: 50%;
 }
@@ -103,7 +102,7 @@ header nav ul li span {
   margin-bottom: 30px;
 }
 .product-info button {
-  background-color: black;
+  background-color: #141527;
   padding: 12px 40px;
   margin-top: 30px;
   color: white;
@@ -119,16 +118,18 @@ header nav ul li span {
   opacity: 0.5;
 }
 
+.label {
+  background-color: black;
+  color: lightgray;
+  padding: 5px 0px;
+  width: 100px;
+  display: inline-block;
+  font-size: 16px;
+}
+
 .product-info-top {
   display: flex;
   justify-content: space-between;
-}
-.product-info-top span:nth-child(1) {
-  background-color: black;
-  color: white;
-  padding: 5px 30px;
-  display: inline-block;
-  font-size: 16px;
 }
 .product-info-top span:nth-child(2) {
   padding: 5px 30px;
@@ -152,7 +153,7 @@ header nav ul li span {
 }
 .sizes div:hover {
   background-color: black;
-  color: white;
+  color: lightgray;
   cursor: pointer;
 }
 
@@ -162,15 +163,16 @@ header nav ul li span {
 }
 
 .accordion-item {
-  border-bottom: solid 1px gray;
+  border-bottom: solid 1px lightgray;
 }
 .accordion-item:first-child {
-  border-top: solid 1px gray;
+  border-top: solid 1px lightgray;
 }
 .accordion-item .accordion-title {
   padding: 20px 0 20px 0;
   display: flex;
   justify-content: space-between;
+  opacity: 0.5;
 }
 .accordion-item .accordion-title:hover {
   cursor: pointer;
@@ -178,13 +180,16 @@ header nav ul li span {
 .accordion-item .accordion-description {
   max-height: 0;
   overflow: hidden;
-  transition: all 1s linear;
+  transition: all 0.5s ease;
 }
 .accordion-item .accordion-description p {
   padding-bottom: 20px;
   font-weight: 500;
 }
 
+.accordion-item.accordionActive .accordion-title {
+  opacity: 1;
+}
 .accordion-item.accordionActive .accordion-description {
   max-height: 100px;
 }
@@ -212,4 +217,52 @@ header nav ul li span {
   margin-left: 10px;
   position: relative;
   top: 8px;
+}
+
+.more-products-section {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.more-products-section .more-products-title {
+  margin-top: 140px;
+  margin-bottom: 40px;
+  font-size: 22px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+}
+.more-products-section .more-products-title h2, .more-products-section .more-products-title span {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.more-products-grid {
+  display: flex;
+  justify-content: space-between;
+}
+.more-products-grid h2 {
+  margin: 15px 0 10px 0;
+}
+
+.product-suggestion {
+  position: relative;
+  text-align: center;
+}
+.product-suggestion .label {
+  position: absolute;
+  left: 0;
+}
+.product-suggestion h2 {
+  font-weight: 700;
+}
+
+.view-products {
+  display: flex;
+}
+.view-products .arrow-icon {
+  transform: rotate(-90deg);
+  padding-top: 20px;
+}
+.view-products .arrow-icon span {
+  background-color: gray;
 }/*# sourceMappingURL=style.css.map */

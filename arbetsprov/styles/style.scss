@@ -1,10 +1,11 @@
-//styles
 @mixin flexCenter($flexDirection) {
     display: flex;
     flex-direction: $flexDirection;
     justify-content: center;
     align-items: center;
 }
+$dark-gray: gray;
+$light-gray: lightgray;
 
 * {
     font-family: 'Roboto Condensed', sans-serif;
@@ -20,12 +21,12 @@
     display: block;
     text-align: center;
     //opacity: 1;
-    display: none;
+    //display: none;
 }
 
 .top-banner {
     background-color: #1d1d1b;
-    color: lightgray;
+    color: $light-gray;
     font-size: 14px;
     padding: 10px;
     display: flex;
@@ -43,7 +44,7 @@
 header {
     @include flexCenter(row);
     height: 140px;
-    box-shadow: 0px 3px 3px lightgray;
+    box-shadow: 0px 3px 3px $light-gray;
     nav {
        padding: 0 120px; 
        ul {
@@ -71,8 +72,8 @@ header {
     line-height: 90px;
     font-weight: 500;
     font-size: 24px;
-    border: 1px solid gray;
-    background-color: #d8d8d8;
+    border: 1px solid $dark-gray;
+    background-color: $light-gray;
 }
 .cart-icon {
     width: 30px;
@@ -84,7 +85,7 @@ header {
 //     width: 50vw;
 // }
 .product-info {
-    background-color: #f2f2f2;
+    background: linear-gradient(180deg, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
     text-align: center;
     flex-basis: 50%;
     // width: 100%;
@@ -106,7 +107,7 @@ header {
         margin-bottom: 30px;
     }
     button {
-        background-color: black;
+        background-color: #141527;
         padding: 12px 40px;
         margin-top: 30px;
         color: white;
@@ -122,16 +123,17 @@ header {
         }
     }
 }
+.label {
+    background-color: black;
+    color: $light-gray;
+    padding: 5px 0px;
+    width: 100px;
+    display: inline-block;
+    font-size: 16px;
+}
 .product-info-top {
     display: flex;
     justify-content: space-between;
-    span:nth-child(1) {
-        background-color: black;
-        color: white;
-        padding: 5px 30px;
-        display: inline-block;
-        font-size: 16px;
-    }
     span:nth-child(2) {
         padding: 5px 30px;
         display: inline-block;
@@ -143,13 +145,13 @@ header {
     div {
         width: 30px;
         height: 30px;
-        border: 1px solid gray;
+        border: 1px solid $dark-gray;
         line-height: 30px;
         margin: 5px;
         margin-top: 20px;
         &:hover {
             background-color: black;
-            color: white;
+            color: $light-gray;
             cursor: pointer;
         }
     }
@@ -159,22 +161,23 @@ header {
     padding: 0 50px;
 }
 .accordion-item {
-    border-bottom: solid 1px gray;
+    border-bottom: solid 1px $light-gray;
     &:first-child {
-        border-top: solid 1px gray;
+        border-top: solid 1px $light-gray;
     }
     .accordion-title {
         padding: 20px 0 20px 0;
         display: flex;
         justify-content: space-between;
+        opacity: 0.5;
         &:hover {
-            cursor:pointer;
+            cursor: pointer;
         }
     }
     .accordion-description {
         max-height: 0;
         overflow: hidden;
-        transition: all 1s linear;
+        transition: all 0.5s ease;
         p {
             padding-bottom: 20px;
             font-weight: 500;
@@ -182,6 +185,9 @@ header {
     }
 }
 .accordion-item.accordionActive {
+    .accordion-title {
+        opacity: 1;
+    }
     .accordion-description {
         max-height: 100px;
 
@@ -193,7 +199,7 @@ header {
         width: 14px;
         height: 1.5px;
         border-radius: 50%;
-        background-color: gray;
+        background-color: $dark-gray;
         transform: rotate(45deg);
         transform-origin: top-left;
         position: relative;
@@ -205,12 +211,57 @@ header {
         width: 14px;
         height: 1.5px;
         border-radius: 50%;
-        background-color: gray;
+        background-color: $dark-gray;
         transform: rotate(-45deg);
         transform-origin: top-right;
         margin-left: 10px;
         position: relative;
         top: 8px;
     }
+}
+
+.more-products-section {
+    max-width: 1440px;
+    margin: 0 auto;
+    .more-products-title {
+        margin-top: 140px;
+        margin-bottom: 40px;
+        font-size: 22px;
+        font-weight: 500;
+        display: flex;
+        justify-content: space-between;
+        h2, span {
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+    }
+}
+.more-products-grid {
+    display: flex;
+    justify-content: space-between;
+    h2 {
+        margin: 15px 0 10px 0;
+    }
+}
+.product-suggestion {
+    position: relative;
+    text-align: center;
+    .label {
+        position: absolute;
+        left: 0;
+    }
+    h2 {
+        font-weight: 700;
+    }
+}
+.view-products {
+    display: flex;
+    .arrow-icon {
+        transform: rotate(-90deg);
+        padding-top: 20px;
+        span {
+            background-color: $dark-gray;
+        }
+}
 }
 
