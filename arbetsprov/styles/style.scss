@@ -178,7 +178,7 @@ header {
         }
     }
     .accordion-description {
-        max-height: 0;
+        display: none;
         overflow: hidden;
         transition: all 0.5s ease;
         p {
@@ -193,6 +193,7 @@ header {
     }
     .accordion-description {
         max-height: 100px;
+        display: block;
 
     }
 }
@@ -488,6 +489,31 @@ footer {
     .more-products-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 10px;
+    }
+    .product-flex-container {
+    display: block;
+    }
+    .product-img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 600px) {
+    .top-banner {
+        display: block;
+        span {
+            display: none;
+        }
+    }
+    .socials {
+        flex-direction: column;
+        button {
+            width: 100%;
+        }
+        button:not(:first-child) {
+            margin-top: 15px;
+        }
     }
 }
 
