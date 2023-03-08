@@ -3,17 +3,6 @@
   font-weight: 300;
 }
 
-.mockup {
-  opacity: 0.4;
-  width: 100%;
-  max-width: 1700px;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  display: block;
-  text-align: center;
-}
-
 .top-banner {
   background-color: #1d1d1b;
   color: lightgray;
@@ -95,12 +84,6 @@ header nav ul li span {
   margin-top: 10px;
   line-height: 34px;
 }
-.product-info .price {
-  font-weight: 700;
-  font-size: 24px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
 .product-info button {
   background-color: #141527;
   padding: 12px 40px;
@@ -116,6 +99,13 @@ header nav ul li span {
 .product-info .article-no span {
   font-weight: 500;
   opacity: 0.5;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .label {
@@ -222,6 +212,7 @@ header nav ul li span {
 .more-products-section {
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 .more-products-section .more-products-title {
   margin-top: 140px;
@@ -254,6 +245,17 @@ header nav ul li span {
 }
 .product-suggestion h2 {
   font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+.product-suggestion p {
+  width: 50%;
+  display: inline-block;
+}
+.product-suggestion .price {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .view-products {
@@ -265,4 +267,78 @@ header nav ul li span {
 }
 .view-products .arrow-icon span {
   background-color: gray;
+}
+
+.newsletter-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+.newsletter-section .newsletter-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: lightgray;
+  width: 75%;
+  justify-content: space-between;
+}
+.newsletter-section .newsletter-content .newsletter-text {
+  text-align: center;
+  width: 400px;
+}
+.newsletter-section .newsletter-content h3 {
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+.newsletter-section .newsletter-content p {
+  font-weight: 500;
+  margin-top: 30px;
+  line-height: 30px;
+}
+
+input[type=text] {
+  height: 50px;
+  width: 300px;
+  background-color: white;
+  padding-left: 20px;
+}
+
+input[type=submit] {
+  background-color: #141527;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  width: 150px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.socials {
+  max-width: 1440px;
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.socials button {
+  width: 32%;
+  height: 60px;
+  border: 2px solid black;
+  letter-spacing: 1px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.mockup {
+  opacity: 0.4;
+  width: 100%;
+  max-width: 1700px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  display: block;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
