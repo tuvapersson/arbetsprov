@@ -319,6 +319,7 @@ input[type=submit] {
 .socials {
   max-width: 1440px;
   margin: 80px auto;
+  margin-bottom: 50px;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -330,6 +331,59 @@ input[type=submit] {
   letter-spacing: 1px;
   font-size: 20px;
   font-weight: 500;
+}
+
+footer {
+  background-color: black;
+  height: 800px;
+}
+
+.footer-navigation-container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: space-between;
+  text-align: left;
+  color: white;
+  padding: 100px 0;
+}
+.footer-navigation-container .footer-navigation {
+  width: 100%;
+  line-height: 45px;
+}
+.footer-navigation-container .footer-navigation h4 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+.footer-navigation-container .footer-navigation:nth-child(4) {
+  margin-top: 45px;
+}
+.footer-navigation-container p:first-of-type {
+  font-weight: 700;
+}
+
+.company-text {
+  color: white;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 70px 0;
+  line-height: 24px;
+  border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+}
+.company-text span {
+  font-weight: 700;
+}
+
+.copyright {
+  text-align: center;
+  color: gray;
+  margin: 0 auto;
+  display: block;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .mockup {
