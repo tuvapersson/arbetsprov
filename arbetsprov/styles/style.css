@@ -770,15 +770,4 @@ footer {
   .footer-navigation-container p:first-of-type {
     font-weight: 700;
   }
-}
-.mockup {
-  opacity: 0.4;
-  width: 100%;
-  max-width: 1700px;
-  position: absolute;
-  top: 0;
-  z-index: 10;
-  display: block;
-  text-align: center;
-  display: none;
 }/*# sourceMappingURL=style.css.map */
