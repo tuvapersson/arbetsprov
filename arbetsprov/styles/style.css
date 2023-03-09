@@ -132,6 +132,10 @@ header nav ul li a span {
   cursor: pointer;
 }
 
+.gallery-circle:first-of-type {
+  opacity: 1;
+}
+
 .product-flex-container {
   display: flex;
 }
@@ -601,7 +605,15 @@ footer {
     height: 50px;
   }
 }
+@media screen and (max-width: 1170px) {
+  .img-gallery-buttons {
+    bottom: 60px;
+  }
+}
 @media screen and (max-width: 1070px) {
+  .img-gallery-buttons {
+    bottom: 25px;
+  }
   .more-products-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;

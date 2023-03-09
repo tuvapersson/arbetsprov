@@ -129,6 +129,9 @@ header {
         cursor: pointer;
     }
 }
+.gallery-circle:first-of-type {
+    opacity: 1;
+}
 .product-flex-container {
     display: flex;
 }
@@ -595,7 +598,15 @@ footer {
         }
     }
 }
+@media screen and (max-width: 1170px) { 
+    .img-gallery-buttons {
+        bottom: 60px;
+    }
+}
 @media screen and (max-width: 1070px) {
+    .img-gallery-buttons {
+        bottom: 25px;
+    }
     .more-products-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 10px;
@@ -698,9 +709,6 @@ footer {
     .cart-icon {
         width: 30px;
     }
-}
-
-@media screen and (max-width: 900px) {
 }
 @media screen and (max-width: 670px) {
     .top-banner {
