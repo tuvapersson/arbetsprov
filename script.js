@@ -2,7 +2,7 @@ let accordionItems = document.querySelectorAll(".accordion-item")
 
 accordionItems.forEach(item => {
     item.addEventListener('click', () => {
-        item.classList.toggle("accordionActive")
+        item.classList.toggle("accordion-active")
       })
 });
 
@@ -32,7 +32,7 @@ let sizeButtons = [...document.querySelectorAll(".size")]
 sizeButtons.forEach(item => {
   item.addEventListener('click', () => {
     for (let i = 0; i < sizeButtons.length; i++) {
-      sizeButtons[i].style.backgroundColor = "#fff"
+      sizeButtons[i].style.backgroundColor = "rgba(0,0,0,0)"
       sizeButtons[i].style.color = "#000"
     }
     item.style.backgroundColor = "#000"
@@ -42,6 +42,7 @@ sizeButtons.forEach(item => {
 
 let hamburgerMenu = document.querySelector(".hamburger-menu")
 let hamburgerMenuSpans = [...document.querySelectorAll(".hamburger-span")]
+let hamburgerNavigation = document.querySelector(".hamburger-navigation")
 
 hamburgerMenu.addEventListener('click', toggleHamburger)
 
@@ -49,4 +50,6 @@ function toggleHamburger() {
   for (let i = 0; i < hamburgerMenuSpans.length; i++) {
     hamburgerMenuSpans[i].classList.toggle("cross")
   }
+  hamburgerNavigation.classList.toggle("hamburger-active")
+  hamburgerMenu.classList.toggle("fixed")
 }
