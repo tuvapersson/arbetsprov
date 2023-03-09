@@ -315,6 +315,9 @@ header nav ul li a span {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 10px;
+  -ms-display: grid;
+  -ms-grid-template-columns: repeat(4, 1fr);
+  -ms-grid-column-gap: 10px;
 }
 .more-products-grid h2 {
   margin: 15px 0 10px 0;
@@ -617,6 +620,8 @@ footer {
   .more-products-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
+    -ms-grid-template-columns: repeat(2, 1fr);
+    -ms-grid-column-gap: 10px;
   }
   .product-flex-container {
     display: block;
@@ -735,6 +740,8 @@ footer {
   .footer-navigation-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    -ms-display: grid;
+    -ms-grid-template-columns: repeat(2, 1fr);
     max-width: 1500px;
     margin: 0 auto;
     justify-content: space-between;
